@@ -1,0 +1,9 @@
+{% if latest_target_list %}
+    <ul>
+        {% for target in latest_target_list %}
+            <li><a href="/entries/{{ target.id }}/">{{ target.target_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

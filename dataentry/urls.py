@@ -1,0 +1,33 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.welcome, name="welcome"),
+    path('datasets/', views.datasets, name="datasets"),
+    path('imprint/', views.imprint, name="imprint"),
+    path('privacy/', views.privacy, name="privacy"),
+    path('about-us/', views.about_us, name="about_us"),
+    path('more-info/', views.more_info, name="more_info"),
+    path('country/', views.search_country, name="search_country"),
+    path('countries/', views.country, name="country"),
+    path('regions/', views.regions, name="regions"),
+    path('regions/asia/', views.region_asia, name="region_asia"),
+    path('regions/africa/', views.region_africa, name="region_africa"),
+    path('regions/americas/', views.region_americas, name="region_americas"),
+    path('regions/europe/', views.region_europe, name="region_europe"),
+    path('regions/oceania/', views.region_oceania, name="region_oceania"),
+    path('country/<int:country_id>/', views.detail_country, name='detail_country'),
+    path('pgag/<int:pgag_id>/', views.detail_group, name='detail_group'),
+    path('groups/', views.groups, name="groups"),
+    path('pgag/', views.search_pgag, name="search_pgag"),
+    path('type/', views.type, name="type"),
+    path('link/', views.link, name="link"),
+    path('support/', views.support, name="support"),
+    path('member/', views.member, name="member"),
+    path('target/', views.target, name="target"),
+    path('purpose/', views.purpose, name="purpose"),
+    #path('entries/', views.index, name='index'),
+    #path('entries/<int:target_id>/', views.detail, name='detail'),
+    #path('entries/<int:target_id>/results/', views.results, name='results'),
+    #path('entries/<int:target_id>/vote/', views.vote, name='vote'),
+]

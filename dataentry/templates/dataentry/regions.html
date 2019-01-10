@@ -1,0 +1,99 @@
+{% extends "dataentry/home.html" %}
+{% load static %}
+
+{% block title %}Regions{% endblock %}
+{% block main_heading %}Regions{% endblock %}
+
+{% block content %}
+<section class="service-area pt-100" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-service">
+                      <img src="{% static 'dataentry/g1.jpg' %}" alt="" title="" width="80%" />	 	
+                      <div class="overlay">
+                        <div class="text">
+                            <p>
+                                <h1>ASIA</h1>
+                            </p>
+                            <a href="/regions/asia/" class="generic-btn default-border">View Countries</a>
+                        </div>
+                      </div>
+                    </div>							
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service">
+                            <img src="{% static 'dataentry/e2.jpg' %}" alt="" title="" width="80%" />	 	
+                            <div class="overlay">
+                              <div class="text">
+                                  <p>
+                                      <h1>AFRICA</h1>
+                                  </p>
+                                  <a href="/regions/africa/" class="generic-btn default-border">View Countries</a>
+                              </div>
+                            </div>
+                    </div>							
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service">
+                            <img src="{% static 'dataentry/e3.jpg' %}" alt="" title="" width="80%" />	 	
+                            <div class="overlay">
+                              <div class="text">
+                                  <p>
+                                        <h1>AMERICAS</h1>
+                                  </p>
+                                  <a href="/regions/americas/" class="generic-btn default-border">View Countries</a>
+                              </div>
+                            </div>
+                    </div>							
+                </div>												
+            </div>
+        </div>	
+    </section>
+
+    <section class="service-area pt-100" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-service">
+                          <img src="{% static 'dataentry/g1.jpg' %}" alt="" title="" width="80%" />	 	
+                          <div class="overlay">
+                            <div class="text">
+                                <p>
+                                        <h1>EUROPE</h1>
+                                </p>
+                                <a href="/regions/europe/" class="generic-btn default-border">View Countries</a>
+                            </div>
+                          </div>
+                        </div>							
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-service">
+                                <img src="{% static 'dataentry/e2.jpg' %}" alt="" title="" width="80%" />	 	
+                                <div class="overlay">
+                                  <div class="text">
+                                      <p>
+                                            <h1>OCEANIA</h1>
+                                      </p>
+                                      <a href="/regions/oceania/" class="generic-btn default-border">View Countries</a>
+                                  </div>
+                                </div>
+                        </div>							
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-service">
+                                <img src="{% static 'dataentry/e3.jpg' %}" alt="" title="" width="80%" />	 	
+                                <div class="overlay">
+                                  <div class="text">
+                                      <p>
+                                          <h1>All Countries</h1>
+                                      </p>
+                                      <a href="/countries/" class="generic-btn default-border">View All</a>
+                                  </div>
+                                </div>
+                        </div>							
+                    </div>												
+                </div>
+            </div>	
+    </section>
+{% endblock %}
