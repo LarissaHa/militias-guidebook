@@ -19,7 +19,11 @@
                 {% if item.1 %}
                 {% for g in item.1 %}
                 {% if forloop.first %}
+                {% ifequal g "not finished yet" %}
+                <td>not finished yet</td></tr>
+                {% else %}
                 <td><a href="/pgag/{{ g.id }}">{{ g.name }}</a></td></tr>
+                {% endifequal %}
                 {% else %}
                 <tr><td></td><td><a href="/pgag/{{ g.id }}">{{ g.name }}</a></td></tr>
                 {% endif %}

@@ -132,6 +132,7 @@ class Migration(migrations.Migration):
                 ('government_creator', models.ManyToManyField(blank=True, to='dataentry.GovernmentCreator', verbose_name='Creating Government Institution')),
                 ('government_link', models.ManyToManyField(to='dataentry.GovernmentLink')),
                 ('membership', models.ManyToManyField(to='dataentry.MemberCharacteristic')),
+                ('finished', models.CharField(choices=[('yes', 'yes'), ('no', 'no')], default='no', max_length=30, verbose_name='Coding completed')),
             ],
             options={
                 'verbose_name': 'PGM',

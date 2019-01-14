@@ -8,6 +8,13 @@
   td {  padding-top: 1em;
         text-align: justify; }
 </style>
+
+{% ifequal pgag.finished "no" %}
+
+  <p> This group is not finished yet. </p>
+
+{% else %}
+
 <table cellspacing="30" valign="top">
   <colgroup>
     <col width="27%">
@@ -180,6 +187,9 @@
           {{ pgag.reference_meta }}{% endifequal %}</td>
     </tr>
   </table>
+
+  {% endifequal %}
+
   <!-- <p><br/></p> -->
   <!--
   <h2>Evidence</h2>

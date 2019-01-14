@@ -7,7 +7,20 @@
 {% block content %} 
 
 {% if groups %}
+  {% if groups2 %}
 
+  <div class="section-top-border">
+    <div class="row">
+      <div class="col-md-3">
+          <img src="{% static 'dataentry/g1.jpg' %}" alt="" title="" width="80%" />
+      </div>
+      <div class="col-md-9 mt-sm-20">
+          <p>This country is not finished yet.</p>
+      </div>
+    </div>
+  </div>
+
+  {% else %}
 <!--<p>The following groups have been reported as active in 
 {{ country.name }}: between 1981 and 2007 </p>-->
 
@@ -66,18 +79,19 @@
 <p>Blue squares indicate that the group was active in that year. Each blue square is supported by at least one piece of evidence in the PGMD. Grey squares indicate the time between the formation and termination of the group when no activity was recorded. Where the termination date is unknown, the group is shaded grey until the end of the period. Select the group names for more detail.</p>
 
 -->
+  {% endif %}
 {% else %}
-{% ifequal country.name "Somalia" %}
-
-  <p> Due to difficulties identifying a government during this time period, this country was excluded from coding. </p>
-  
-  {% else %}
-    {% ifequal country.name "Lebanon" %}
-    <p> Due to difficulties identifying a government during this time period, this country was excluded from coding. </p>
-    {% else %}
-    <p>No groups are reported active between 1981 and 2014.</p>
-  {% endifequal %}
-  {% endifequal %}
+<div class="section-top-border">
+  <div class="row">
+    <div class="col-md-3">
+        <img src="{% static 'dataentry/g1.jpg' %}" alt="" title="" width="80%" />
+    </div>
+    <div class="col-md-9 mt-sm-20">
+      <p>No groups are reported active between 1981 and 2014.</p>
+    </div>
+  </div>
+</div>
+    
   
 {% endif %}
 

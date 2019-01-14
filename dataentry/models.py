@@ -141,6 +141,8 @@ class PGAG(models.Model):
 
     # YNUN2 includes the option N/A
     YNUN2 = (('noinf', 'no information'),('yes', 'yes'), ('no', 'no'), ('unclear', 'unclear'),('NA', 'NA'))
+
+    YNUN3 = (('yes', 'yes'), ('no', 'no'))
     
     ACC = (('dec', 'decade'),('yr', 'year'), ('mo', 'month'), ('dy', 'day'))
 
@@ -374,6 +376,12 @@ class PGAG(models.Model):
                     max_length=10000,
                     help_text="Please add references in alphabetical order and insert an empty line after each reference.",
                      blank=True)
+
+    ## new 09.01.19: Field if coding is finished
+    finished = models.CharField("Coding completed",
+                    choices=YNUN3,
+                    max_length=30,
+                     default='no')
     
 
     #    purpose_details = models.TextField("Details of group purpose", 

@@ -50,7 +50,9 @@ def detail_country(request, country_id):
     grlist = []
     for g in groups:
         grlist.append([g, grl[g]])
-    return render(request, 'dataentry/detail_country.html', {'country': country, 'groups': groups, 'grlist' : grlist})
+    
+    groups2 = PGAG.objects.filter(country=country_id, finished="no").order_by("name")
+    return render(request, 'dataentry/detail_country.html', {'country': country, 'groups': groups, 'grlist' : grlist, 'groups2' : groups2})
 
 def detail_group(request, pgag_id):
     pgag = get_object_or_404(PGAG, pk=pgag_id)
@@ -81,12 +83,16 @@ def regions(request):
 def groups(request):
     countries = Country.objects.all().order_by("name")
     groups = PGAG.objects.all()
+    groups2 = PGAG.objects.filter(finished="yes")
     ctg = {}
     for c in countries:
         ctg[c] = set()
 
     for g in groups:
-        ctg[g.country].add(g)
+        if g in groups2:
+            ctg[g.country].add(g)
+        else:
+            ctg[g.country].add("not finished yet")
 
 
     ctglist = []
@@ -182,7 +188,7 @@ def search_pgag(request):
         qset = (
             Q(name__icontains=query)
             )
-        results = PGAG.objects.filter(qset).distinct().order_by('name')
+        results = PGAG.objects.filter(qset, finished="yes").distinct().order_by('name')
 
         country2pgag = {}
         for pgag in results:

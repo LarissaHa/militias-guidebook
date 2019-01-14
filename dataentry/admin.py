@@ -128,6 +128,9 @@ class PGAGOptions(admin.ModelAdmin):
         ('References for Meta-Analysis',
          {'fields': ('reference_meta',)
           }),
+        ('Coding progress',
+         {'fields': ('finished',)
+          }),
         )
 
     list_display = ('name', 'country')
