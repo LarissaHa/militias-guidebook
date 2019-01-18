@@ -8,7 +8,7 @@
 <div class="section-top-border">
     <div class="row">
       <div class="col-md-3">
-          <img src="{% static 'dataentry/g1.jpg' %}" alt="" title="" width="80%" />
+          <img src="{% static 'dataentry/country-generic.jpg' %}" alt="" title="" width="100%" />
       </div>
       <div class="col-md-9 mt-sm-20">
           <table>
@@ -20,7 +20,7 @@
                 {% for g in item.1 %}
                 {% if forloop.first %}
                 {% ifequal g "not finished yet" %}
-                <td>not finished yet</td></tr>
+                <td>coding still in progress</td></tr>
                 {% else %}
                 <td><a href="/pgag/{{ g.id }}">{{ g.name }}</a></td></tr>
                 {% endifequal %}
