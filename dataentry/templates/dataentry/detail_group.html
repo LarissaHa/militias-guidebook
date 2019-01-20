@@ -5,8 +5,10 @@
 
 {% block content %}
 <style>
-  td {  padding-top: 1em;
-        text-align: justify; }
+  table td, table td * {  padding-top: 1em;
+                          text-align: justify; 
+                          vertical-align: top;
+}
 </style>
 
 {% ifequal pgag.finished "no" %}
@@ -182,9 +184,9 @@
           {{ pgag.other }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>References for Meta-Analysis:</b></td>
+      <td><b>References:</b></td>
       <td>{% ifequal pgag.reference_meta '' %}--{% else %}
-          {{ pgag.reference_meta }}{% endifequal %}</td>
+          {{ pgag.reference_meta|linebreaksbr }}{% endifequal %}</td>
     </tr>
   </table>
 
