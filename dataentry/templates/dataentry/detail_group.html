@@ -23,46 +23,46 @@
     <col width="73%">
   </colgroup>
     <tr>
-      <td><b>Country:</b></td>
+      <td style="text-align:left"><b>Country:</b></td>
       <td><a href="/country/{{ pgag.country.id }}">{{ pgag.country.name }}</a></td>
     </tr>
      <tr>
-      <td><b>Details of Formation:</b></td>
+      <td style="text-align:left"><b>Details of Formation:</b></td>
       <td>{% ifequal pgag.origin '' %}--{% else %}
           {{ pgag.origin }}{% endifequal %}</td>
     </tr>
      <tr>
-      <td><b>Details of Termination:</b></td>
+      <td style="text-align:left"><b>Details of Termination:</b></td>
       <td>{% ifequal pgag.termination '' %}--{% else %}
           {{ pgag.termination }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Purpose:</b></td>
+      <td style="text-align:left"><b>Purpose:</b></td>
       <td>{% ifequal pgag.purpose_text '' %}--{% else %}
           {{ pgag.purpose_text }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Organisation:</b></td>
+      <td style="text-align:left"><b>Organisation:</b></td>
       <td>{% ifequal pgag.organisation '' %}--{% else %}
           {{ pgag.organisation }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Weapons and Training:</b></td>
+      <td style="text-align:left"><b>Weapons and Training:</b></td>
       <td>{% ifequal pgag.weapon_training '' %}--{% else %}
           {{ pgag.weapon_training }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Size:</b></td>
+      <td style="text-align:left"><b>Size:</b></td>
       <td>{% ifequal pgag.size '' %}--{% else %}
           {{ pgag.size }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Reason for Membership:</b></td>
+      <td style="text-align:left"><b>Reason for Membership:</b></td>
       <td>{% ifequal pgag.reason_membership '' %}--{% else %}
           {{ pgag.reason_membership }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>Treatment of Civilians:</b></td>
+      <td style="text-align:left"><b>Treatment of Civilians:</b></td>
       <td>{% ifequal pgag.treatment_civilians '' %}--{% else %}
           {{ pgag.treatment_civilians }}{% endifequal %}</td>
     </tr>
@@ -179,12 +179,12 @@
     </tr>
     -->
     <tr>
-      <td><b>Other Information:</b></td>
+      <td style="text-align:left"><b>Other Information:</b></td>
       <td>{% ifequal pgag.other '' %}--{% else %}
           {{ pgag.other }}{% endifequal %}</td>
     </tr>
     <tr>
-      <td><b>References:</b></td>
+      <td style="text-align:left"><b>References:</b></td>
       <td>{% ifequal pgag.reference_meta '' %}--{% else %}
           {{ pgag.reference_meta|linebreaksbr }}{% endifequal %}</td>
     </tr>
