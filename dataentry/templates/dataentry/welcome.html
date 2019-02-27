@@ -16,6 +16,12 @@
 		<meta name="keywords" content="">
 		<!-- meta character set -->
 		<meta charset="UTF-8">
+		<!-- bokeh import -->
+		<link href="http://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" rel="stylesheet" type="text/css">
+		<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.0.4.min.css" rel="stylesheet" type="text/css">
+		<script src="http://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+		<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.0.4.min.js"></script>
+		{{ script | safe }}
 		<!-- Site Title -->
 		<title>Pro-Government Militias | Welcome</title>
 
@@ -231,7 +237,11 @@
 				</div>	
 			</section>
 			<!-- End quote Area -->
-
+			<section class="sample-text-area">
+				<div class="container" >
+					{{ div | safe }}
+				</div>
+			</section>
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">
 					<div class="container">
