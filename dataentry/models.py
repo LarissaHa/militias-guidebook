@@ -7,13 +7,13 @@ class Operation(models.Model):
     group = models.ForeignKey("PGAG", on_delete=models.PROTECT)
     incidents = models.IntegerField("Number of incidents")
     
-    def __unicode__(self):
+    def __str__(self):
         return "%s in %s" % (self.group, self.year)
 
 class Target(models.Model):
     type = models.CharField(max_length=200)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.type
 
 class Evidence(models.Model):
@@ -27,7 +27,7 @@ class Evidence(models.Model):
             verbose_name = 'piece of evidence'
             verbose_name_plural = 'pieces of evidence'
     
-    def __unicode__(self):
+    def __str__(self):
         return "%s %s on %s" % (self.source, self.date, self.group)
 
 class Country(models.Model):
@@ -48,7 +48,7 @@ class Country(models.Model):
             verbose_name = 'country'
             verbose_name_plural = 'countries'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class Support(models.Model):
@@ -58,13 +58,13 @@ class Support(models.Model):
             verbose_name = 'type of material support'
             verbose_name_plural = 'types of material support'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.type
 
 class MemberCharacteristic(models.Model):
     name = models.CharField(max_length=200)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class TermType(models.Model):
@@ -74,7 +74,7 @@ class TermType(models.Model):
             verbose_name = 'Termination Type'
             verbose_name_plural = 'Termination Types'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.type
 
 class UCDP(models.Model):
@@ -83,7 +83,7 @@ class UCDP(models.Model):
     class Meta:
             verbose_name = 'UCDP Actor ID'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.type
 
 class Purpose(models.Model):
@@ -92,19 +92,19 @@ class Purpose(models.Model):
     class Meta:
             verbose_name = 'group purpose'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class GovernmentLink(models.Model):
     name = models.CharField(max_length=100)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class GovernmentCreator(models.Model):
     name = models.CharField(max_length=100)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class Ethnic(models.Model):
@@ -116,13 +116,13 @@ class Ethnic(models.Model):
         verbose_name = 'Ethnic Group (EPR)'
         verbose_name_plural = 'Ethnic Groups (EPR)'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.type
 
 class RelativeBenefit(models.Model):
     name = models.CharField(max_length=100)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class TypeViolence(models.Model):
@@ -132,7 +132,7 @@ class TypeViolence(models.Model):
             verbose_name = 'type of violence'
             verbose_name_plural = 'types of violence'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class PGAG(models.Model):
@@ -396,7 +396,7 @@ class PGAG(models.Model):
     
     # evidence here?
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s (%s)" % (self.name, self.country)
 
     class Meta:

@@ -9,6 +9,36 @@ from bokeh.embed import components
 from bokeh.models import ColumnDataSource, FactorRange, LassoSelectTool, WheelZoomTool, BoxSelectTool
 from bokeh.palettes import Spectral6
 from bokeh.transform import factor_cmap
+import numpy as np
+#import netCDF4
+from bokeh.plotting import vplot, hplot, cursession#, output_server, show
+from viz import climate_map, timeseries, legend, get_slice
+import time
+
+def map(request):
+    #data = netCDF4.Dataset('data/Land_and_Ocean_LatLong1.nc')
+    #t = data.variables['temperature']
+
+    climate_map = climate_map()
+    timeseries = timeseries()
+    legend = legend()
+
+    map_legend = hplot(climate_map, legend)
+    layout = vplot(map_legend, timeseries)
+    #show(layout)
+    
+    #renderer = climate_map.select(dict(name="image"))
+    #ds = renderer[0].data_source
+
+    #for year_index in np.arange(2000, 2015, 1):
+    #    for month_index in np.arange(1, 13, 1):
+    #        image = get_slice(t, year_index, month_index)
+    #        ds.data["image"] = [image]
+    #        cursession().store_objects(ds)
+    #        time.sleep(0.2)
+
+    script, div = components(layout)
+    return render(request, 'dataentry/welcome.html', {'script': script, 'div': div})
 
 def welcome(request):
     fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
