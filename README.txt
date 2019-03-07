@@ -34,9 +34,9 @@ o lokal
 | - wsgi.py (for apache to run properly?)
 
 HOW TO UPDATE DATENBANK
-	- SQLiteStudio
-	- Beide Datenbanken laden
-	- Tabelle "dataentry_pgag" in militias-db kopieren (zB mit Strg+C)
+  - SQLiteStudio
+  - Beide Datenbanken laden
+  - Tabelle "dataentry_pgag" in militias-db kopieren (zB mit Strg+C)
 	- In Guidebook einfügen (zB mit Strg+V)
 	- Meldung mit "Nein" beantworten (wir brauchen die Beziehungen zu 
     den anderen Tabellen nicht, denn die werden nicht ausgelesen)
