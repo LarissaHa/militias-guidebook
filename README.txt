@@ -37,11 +37,11 @@ HOW TO UPDATE DATENBANK
   - SQLiteStudio
   - Beide Datenbanken laden
   - Tabelle "dataentry_pgag" in militias-db kopieren (zB mit Strg+C)
-	- In Guidebook einfügen (zB mit Strg+V)
-	- Meldung mit "Nein" beantworten (wir brauchen die Beziehungen zu 
+  - In Guidebook einfügen (zB mit Strg+V)
+  - Meldung mit "Nein" beantworten (wir brauchen die Beziehungen zu 
     den anderen Tabellen nicht, denn die werden nicht ausgelesen)
-	- Neuen Namen vergeben, da ja schon eine "dataentry_pgag" existiert
-	- Die alte "dataentry_pgag" löschen
+  - Neuen Namen vergeben, da ja schon eine "dataentry_pgag" existiert
+  - Die alte "dataentry_pgag" löschen
   - Die neue "dataentry_pgag" umbenennen in "dataentry_pgag" (wichtig, 
     sonst wird die Tabelle nicht richtig ausgelesen)
     
